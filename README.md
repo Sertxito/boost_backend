@@ -18,7 +18,7 @@ This package provides reusable backend reasoning assets for MCPEE capabilities:
 ## Quick Start
 
 ```bash
-npm install @mcpee/core
+npm install mcp-efficiency-engine
 npm install mcpee-backend
 npx mcpee doctor
 ```

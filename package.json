@@ -56,6 +56,6 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@mcpee/core": "^0.1.0"
+    "mcp-efficiency-engine": ">=0.1.0"
   }
 }
