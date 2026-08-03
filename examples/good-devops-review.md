@@ -17,8 +17,8 @@ Review our backend CI/CD and deployment process, then prioritize reliability and
   - specs/testing.md
   - specs/observability.md
 - Skills used:
-  - skills/devops-review.md
-  - skills/release-review.md
+  - skills/devops-review/SKILL.md
+  - skills/release-review/SKILL.md
 - Providers used:
   - pipeline-analysis
   - document-search

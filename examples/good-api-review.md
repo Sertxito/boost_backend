@@ -18,8 +18,8 @@ Review this backend API design and list the highest-risk issues we should fix be
   - specs/versioning.md
   - specs/security.md
 - Skills used:
-  - skills/api-review.md
-  - skills/testing-review.md
+  - skills/api-review/SKILL.md
+  - skills/testing-review/SKILL.md
 - Providers used:
   - code-navigation
   - symbol-analysis

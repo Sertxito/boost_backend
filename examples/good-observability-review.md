@@ -18,8 +18,8 @@ Review our backend observability and prioritize the changes that will most reduc
   - specs/logging.md
   - specs/telemetry.md
 - Skills used:
-  - skills/observability-review.md
-  - skills/dependency-analysis.md
+  - skills/observability-review/SKILL.md
+  - skills/dependency-analysis/SKILL.md
 - Providers used:
   - telemetry
   - call-path-analysis

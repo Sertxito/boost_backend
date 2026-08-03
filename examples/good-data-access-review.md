@@ -17,8 +17,8 @@ Review our data access layer and call out the highest-impact performance and cor
   - specs/performance.md
   - specs/transactions.md
 - Skills used:
-  - skills/data-access-review.md
-  - skills/performance-analysis.md
+  - skills/data-access-review/SKILL.md
+  - skills/performance-analysis/SKILL.md
 - Providers used:
   - schema-analysis
   - dependency-analysis

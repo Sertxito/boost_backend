@@ -17,8 +17,8 @@ Review our backend security posture and prioritize exploitable weaknesses.
   - specs/data-protection.md
   - specs/error-handling.md
 - Skills used:
-  - skills/security-review.md
-  - skills/api-review.md
+  - skills/security-review/SKILL.md
+  - skills/api-review/SKILL.md
 - Providers used:
   - code-navigation
   - dependency-analysis

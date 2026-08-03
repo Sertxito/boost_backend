@@ -17,8 +17,8 @@ Review our testing approach and propose a practical strategy to improve confiden
   - specs/clean-architecture.md
   - specs/api-design.md
 - Skills used:
-  - skills/testing-review.md
-  - skills/test-impact-analysis.md
+  - skills/testing-review/SKILL.md
+  - skills/test-impact-analysis/SKILL.md
 - Providers used:
   - test-discovery
   - dependency-analysis

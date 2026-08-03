@@ -17,8 +17,8 @@ Review this backend for performance bottlenecks and propose the fastest high-imp
   - specs/caching.md
   - specs/observability.md
 - Skills used:
-  - skills/performance-analysis.md
-  - skills/data-access-review.md
+  - skills/performance-analysis/SKILL.md
+  - skills/data-access-review/SKILL.md
 - Providers used:
   - telemetry
   - dependency-analysis
