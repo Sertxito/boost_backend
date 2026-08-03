@@ -60,7 +60,7 @@ This repository includes an automated release workflow:
 
 Configure this repository secret before enabling automated publish:
 
-- `NPM_TOKEN`: npm automation token with publish access to `@mcpee/backend`
+- `NPM_TOKEN`: npm automation token with publish access to `mcpee-backend`
 
 ### Important
 
