@@ -17,8 +17,8 @@ Please review the backend architecture and identify boundary violations that wil
   - specs/ddd.md
   - specs/modular-monolith.md
 - Skills used:
-  - skills/architecture-review.md
-  - skills/dependency-analysis.md
+  - skills/architecture-review/SKILL.md
+  - skills/dependency-analysis/SKILL.md
 - Providers used:
   - dependency-analysis
   - call-path-analysis

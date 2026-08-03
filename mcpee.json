@@ -11,8 +11,11 @@
       "title": "Backend Architecture Review",
       "agent": "agents/project-architecture-planner.agent.md",
       "skills": [
-        "skills/architecture-review.md",
-        "skills/dependency-analysis.md"
+        "skills/architecture-review/SKILL.md",
+        "skills/dependency-analysis/SKILL.md",
+        "skills/migration-analysis/SKILL.md",
+        "skills/provider-context-selection/SKILL.md",
+        "skills/task-planning/SKILL.md"
       ],
       "specs": [
         "specs/clean-architecture.md",
@@ -20,7 +23,12 @@
         "specs/cqrs.md",
         "specs/modular-monolith.md",
         "specs/microservices.md",
-        "specs/observability.md"
+        "specs/observability.md",
+        "specs/cloud-native.md",
+        "specs/integration-patterns.md",
+        "specs/event-driven.md",
+        "specs/resilience.md",
+        "specs/net-best-practices.md"
       ],
       "prompts": [
         "prompts/architecture-review.prompt.md"
@@ -41,8 +49,9 @@
       "title": "Backend API Review",
       "agent": "agents/api-architect.agent.md",
       "skills": [
-        "skills/api-review.md",
-        "skills/testing-review.md"
+        "skills/api-review/SKILL.md",
+        "skills/testing-review/SKILL.md",
+        "skills/code-review/SKILL.md"
       ],
       "specs": [
         "specs/api-design.md",
@@ -69,15 +78,16 @@
       "title": "Backend Refactoring Review",
       "agent": "agents/principal-software-engineer.agent.md",
       "skills": [
-        "skills/refactoring.md",
-        "skills/dependency-analysis.md",
-        "skills/test-impact-analysis.md"
+        "skills/refactoring/SKILL.md",
+        "skills/dependency-analysis/SKILL.md",
+        "skills/test-impact-analysis/SKILL.md"
       ],
       "specs": [
         "specs/clean-architecture.md",
         "specs/testing.md",
         "specs/code-quality.md",
-        "specs/dependency-injection.md"
+        "specs/dependency-injection.md",
+        "specs/refactoring.md"
       ],
       "prompts": [
         "prompts/refactoring.prompt.md"
@@ -97,8 +107,8 @@
       "title": "Backend Performance Review",
       "agent": "agents/principal-software-engineer.agent.md",
       "skills": [
-        "skills/performance-analysis.md",
-        "skills/data-access-review.md"
+        "skills/performance-analysis/SKILL.md",
+        "skills/data-access-review/SKILL.md"
       ],
       "specs": [
         "specs/performance.md",
@@ -124,8 +134,8 @@
       "title": "Backend Observability Review",
       "agent": "agents/principal-software-engineer.agent.md",
       "skills": [
-        "skills/observability-review.md",
-        "skills/dependency-analysis.md"
+        "skills/observability-review/SKILL.md",
+        "skills/dependency-analysis/SKILL.md"
       ],
       "specs": [
         "specs/observability.md",
@@ -151,8 +161,8 @@
       "title": "Backend Security Review",
       "agent": "agents/principal-software-engineer.agent.md",
       "skills": [
-        "skills/security-review.md",
-        "skills/api-review.md"
+        "skills/security-review/SKILL.md",
+        "skills/api-review/SKILL.md"
       ],
       "specs": [
         "specs/security.md",
@@ -177,8 +187,8 @@
       "title": "Backend Testing Review",
       "agent": "agents/qa-subagent.agent.md",
       "skills": [
-        "skills/testing-review.md",
-        "skills/test-impact-analysis.md"
+        "skills/testing-review/SKILL.md",
+        "skills/test-impact-analysis/SKILL.md"
       ],
       "specs": [
         "specs/testing.md",
@@ -202,8 +212,9 @@
       "title": "Backend Data Access Review",
       "agent": "agents/principal-software-engineer.agent.md",
       "skills": [
-        "skills/data-access-review.md",
-        "skills/performance-analysis.md"
+        "skills/data-access-review/SKILL.md",
+        "skills/performance-analysis/SKILL.md",
+        "skills/database-first-review/SKILL.md"
       ],
       "specs": [
         "specs/data-access.md",
@@ -228,14 +239,19 @@
       "title": "Backend DevOps Review",
       "agent": "agents/devops-expert.agent.md",
       "skills": [
-        "skills/devops-review.md",
-        "skills/release-review.md"
+        "skills/devops-review/SKILL.md",
+        "skills/release-review/SKILL.md",
+        "skills/token-budgeting/SKILL.md"
       ],
       "specs": [
         "specs/devops.md",
         "specs/observability.md",
         "specs/testing.md",
-        "specs/security.md"
+        "specs/security.md",
+        "specs/ci-cd.md",
+        "specs/containerization.md",
+        "specs/configuration.md",
+        "specs/azure-backend-patterns.md"
       ],
       "prompts": [
         "prompts/devops-review.prompt.md"

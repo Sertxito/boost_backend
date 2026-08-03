@@ -24,8 +24,9 @@
     "check:structure": "node scripts/check-structure.js",
     "check:refs": "node scripts/validate-references.js",
     "check:evals": "node scripts/validate-evals.js",
+    "check:alignment": "node scripts/validate-artifact-alignment.js",
     "check:placeholders": "node scripts/check-placeholders.js",
-    "quality": "npm run check:structure && npm run check:refs && npm run check:evals && npm run check:placeholders"
+    "quality": "npm run check:structure && npm run check:refs && npm run check:evals && npm run check:alignment && npm run check:placeholders"
   },
   "keywords": [
     "mcpee",

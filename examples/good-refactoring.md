@@ -17,8 +17,8 @@ Review this codebase and propose a safe refactoring sequence that improves maint
   - specs/clean-architecture.md
   - specs/code-quality.md
 - Skills used:
-  - skills/refactoring.md
-  - skills/test-impact-analysis.md
+  - skills/refactoring/SKILL.md
+  - skills/test-impact-analysis/SKILL.md
 - Providers used:
   - code-navigation
   - blast-radius
