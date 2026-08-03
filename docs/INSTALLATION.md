@@ -10,7 +10,7 @@
 
 ```bash
 npm install @mcpee/core
-npm install @sertxito/backend
+npm install @mcpee/backend
 ```
 
 ## Verify
@@ -23,7 +23,7 @@ The backend boost is discovered through `mcpee.json`.
 
 ## Local Customization
 
-Avoid direct edits in `node_modules/@sertxito/backend`.
+Avoid direct edits in `node_modules/@mcpee/backend`.
 
 Use project-local directories:
 

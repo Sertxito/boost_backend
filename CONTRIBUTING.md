@@ -1,4 +1,4 @@
-# Contributing to @sertxito/backend
+# Contributing to @mcpee/backend
 
 ## Scope
 

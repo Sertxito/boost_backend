@@ -1,4 +1,4 @@
-# @sertxito/backend
+# @mcpee/backend
 
 Official backend boost for MCPEE.
 
@@ -19,7 +19,7 @@ This package provides reusable backend reasoning assets for MCPEE capabilities:
 
 ```bash
 npm install @mcpee/core
-npm install @sertxito/backend
+npm install @mcpee/backend
 npx mcpee doctor
 ```
 
@@ -50,7 +50,7 @@ Example = what good looks like
 
 ## Local Project Customization
 
-Do not edit installed content directly under `node_modules/@sertxito/backend`.
+Do not edit installed content directly under `node_modules/@mcpee/backend`.
 
 Use:
 
