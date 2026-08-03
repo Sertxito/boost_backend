@@ -60,6 +60,11 @@
   "peerDependencies": {
     "@mcpee/core": "^0.1.0"
   },
+  "peerDependenciesMeta": {
+    "@mcpee/core": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
