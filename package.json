@@ -1,5 +1,5 @@
 {
-  "name": "@mcpee/backend",
+  "name": "@sertxito/backend",
   "version": "0.1.0",
   "description": "MCPEE Backend Boost: specs, agents, skills, prompts, and evals for backend reasoning.",
   "type": "module",

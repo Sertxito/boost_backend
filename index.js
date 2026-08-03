@@ -1,4 +1,4 @@
 export default {
-  name: "@mcpee/backend",
+  name: "@sertxito/backend",
   type: "boost"
 };

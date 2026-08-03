@@ -60,12 +60,12 @@ This repository includes an automated release workflow:
 
 Configure this repository secret before enabling automated publish:
 
-- `NPM_TOKEN`: npm automation token with publish access to `@mcpee/backend`
+- `NPM_TOKEN`: npm automation token with publish access to `@sertxito/backend`
 
 ### Important
 
 - Every merge intended for publish must bump `package.json` version.
-- If the same version already exists in npm, the workflow fails intentionally.
+- If the same version already exists in npm, the workflow skips publish.
 
 ## Post-Release Validation
 

@@ -1,4 +1,4 @@
-# Contributing to @mcpee/backend
+# Contributing to @sertxito/backend
 
 ## Scope
 
@@ -40,7 +40,7 @@ npm run quality
 
 When changing a capability domain, keep these assets aligned:
 
-- `skills/<domain>.md`
+- `skills/<domain>/SKILL.md`
 - `specs/*` relevant to the domain
 - `prompts/<domain>.prompt.md`
 - `evals/<domain>.cases.json`
