@@ -1,69 +1,40 @@
-name: Publish NPM Package
+name: Release
 
 on:
   push:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
       - name: Validate quality gates
         run: npm run quality
 
-      - name: Read package metadata
-        id: pkg
-        shell: bash
-        run: |
-          NAME=$(node -p "require('./package.json').name")
-          VERSION=$(node -p "require('./package.json').version")
-          echo "name=$NAME" >> "$GITHUB_OUTPUT"
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-
-      - name: Check if version is already published
-        id: version_check
-        shell: bash
-        run: |
-          set +e
-          OUT=$(npm view "${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}" version 2>&1)
-          CODE=$?
-          set -e
-
-          if [ "$CODE" -eq 0 ]; then
-            echo "Version ${{ steps.pkg.outputs.version }} is already published for ${{ steps.pkg.outputs.name }}."
-            echo "skip_publish=true" >> "$GITHUB_OUTPUT"
-          elif echo "$OUT" | grep -qi "E404\|Not Found"; then
-            echo "Package/version not found in npm yet (expected for first publish)."
-            echo "skip_publish=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "Failed checking npm registry metadata."
-            echo "$OUT"
-            exit 1
-          fi
-
-      - name: Dry-run package
-        if: steps.version_check.outputs.skip_publish != 'true'
-        run: npm pack --dry-run
-
-      - name: Publish package
-        if: steps.version_check.outputs.skip_publish != 'true'
-        run: npm publish --access public
+      - name: Run semantic release
+        run: npm run release
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Skip publish notice
-        if: steps.version_check.outputs.skip_publish == 'true'
-        run: echo "Skipping publish because this version is already available in npm."
