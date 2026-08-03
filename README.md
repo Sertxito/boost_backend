@@ -1,47 +1,62 @@
-# boost_backend
+# @mcpee/backend
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub Repo](https://img.shields.io/badge/repo-boost__backend-blue)](https://github.com/Sertxito/boost_backend)
-
-> Boost: Guía Clara de Uso — Meta-Documentación para Copilot Customizations
+Official backend boost for MCPEE.
 
 ## Overview
 
-Documentación operativa y plantillas reutilizables sobre cómo montar especialización en GitHub Copilot mediante `.github/instructions`, `.github/agents`, `.github/skills`.
+This package provides reusable backend reasoning assets for MCPEE capabilities:
 
-**Nota**: Este es un boost meta-documental, no una solución independiente. Sirve como referencia para construir otros boosts.
-
-### Key Features
-
-- ✅ **Agentes Especializados** — DevOps Expert, .NET Engineer, Playwright Tester, Task Planner
-- ✅ **Skills Reutilizables** — Componentes documentados para reutilizar  
-- ✅ **Contrato Global** — AGENTS.md con routing determinista
-- ✅ **Patrones Probados** — Estructuras que funcionan en múltiples dominios
-- ✅ **Guía Paso-a-Paso** — Cómo montar tu propio boost desde cero
+- architecture
+- API design
+- refactoring
+- performance
+- security
+- testing
+- data access
+- backend DevOps
 
 ## Quick Start
 
-### Lectura Esencial
-
-1. [AGENTS.md](AGENTS.md) — Contrato de agentes y routing
-2. [Skills Registry](.github/skills/) — Catálogo completo
-3. [Instructions Registry](.github/instructions/) — Especificaciones
-
-### Crear Tu Primer Boost
-
 ```bash
-# 1. Lee la template en .github/agents/
-# 2. Copia y personaliza
-# 3. Actualiza AGENTS.md
-# 4. Prueba con Copilot
+npm install @mcpee/core
+npm install @mcpee/backend
+npx mcpee doctor
 ```
 
-## Documentation
+MCPEE Core discovers this boost through `mcpee.json`.
 
-- [Agent Design Patterns](docs/AGENT_PATTERNS.md)
-- [Skill Development](docs/SKILL_DEVELOPMENT.md)
-- [Routing Contract](docs/ROUTING.md)
+## Package Structure
 
-## License
+```text
+agents/   -> who acts
+specs/    -> universal truths and non-negotiable guidance
+skills/   -> operational procedures that can evolve
+prompts/  -> runtime prompt composition per capability
+evals/    -> evaluation criteria and test cases
+examples/ -> examples of high-quality outputs
+docs/     -> package documentation and contribution guides
+```
 
-MIT — See [LICENSE](LICENSE)
+## Golden Rule
+
+```text
+Agent = who I am
+Spec = what I know
+Skill = how I work
+Prompt = how I compose
+Eval = how I measure quality
+Example = what good looks like
+```
+
+## Local Project Customization
+
+Do not edit installed content directly under `node_modules/@mcpee/backend`.
+
+Use:
+
+```text
+.mcpee/generated-skills/backend/
+.mcpee/overrides/backend/
+.mcpee/knowledge/
+.mcpee/memory/
+```

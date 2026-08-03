@@ -1,0 +1,60 @@
+{
+  "name": "@mcpee/backend",
+  "version": "0.1.0",
+  "description": "MCPEE Backend Boost: specs, agents, skills, prompts, and evals for backend reasoning.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./mcpee": "./mcpee.json"
+  },
+  "files": [
+    "mcpee.json",
+    "agents",
+    "specs",
+    "skills",
+    "prompts",
+    "evals",
+    "examples",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check:structure": "node scripts/check-structure.js",
+    "check:refs": "node scripts/validate-references.js",
+    "check:evals": "node scripts/validate-evals.js",
+    "check:placeholders": "node scripts/check-placeholders.js",
+    "quality": "npm run check:structure && npm run check:refs && npm run check:evals && npm run check:placeholders"
+  },
+  "keywords": [
+    "mcpee",
+    "boost",
+    "backend",
+    "agents",
+    "skills",
+    "specs",
+    "clean-architecture",
+    "ddd",
+    "api-design"
+  ],
+  "author": "Sergio Hierro Cinos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sertxito/boost_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sertxito/boost_backend/issues"
+  },
+  "homepage": "https://github.com/Sertxito/boost_backend#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@mcpee/core": "^0.1.0"
+  }
+}
