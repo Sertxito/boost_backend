@@ -60,4 +60,3 @@ Use:
 .mcpee/knowledge/
 .mcpee/memory/
 ```
-
