@@ -1,6 +1,6 @@
 {
   "name": "mcpee-backend",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "MCPEE Backend Boost: specs, agents, skills, prompts, and evals for backend reasoning.",
   "type": "module",
   "main": "index.js",
