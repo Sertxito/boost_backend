@@ -1,4 +1,4 @@
 export default {
-  name: "@mcpee/backend",
+  name: "mcpee-backend",
   type: "boost"
 };

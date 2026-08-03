@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "name": "@mcpee/backend",
+  "name": "mcpee-backend",
   "version": "0.1.0",
   "type": "boost",
   "domain": "backend",

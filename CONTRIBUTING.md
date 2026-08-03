@@ -1,4 +1,4 @@
-# Contributing to @mcpee/backend
+# Contributing to mcpee-backend
 
 ## Scope
 
