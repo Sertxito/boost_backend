@@ -1,23 +1,19 @@
 name: Publish NPM Package
 
 on:
-  pull_request:
+  push:
     branches: [main]
-    types: [closed]
 
 permissions:
   contents: read
 
 jobs:
   publish:
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout merged commit
+      - name: Checkout main
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.merge_commit_sha }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -37,19 +33,27 @@ jobs:
           echo "name=$NAME" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
-      - name: Ensure version is not already published
+      - name: Check if version is already published
+        id: version_check
         shell: bash
         run: |
           if npm view "${{ steps.pkg.outputs.name }}@${{ steps.pkg.outputs.version }}" version >/dev/null 2>&1; then
             echo "Version ${{ steps.pkg.outputs.version }} is already published for ${{ steps.pkg.outputs.name }}."
-            echo "Bump package.json version before merging into main."
-            exit 1
+            echo "skip_publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip_publish=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Dry-run package
+        if: steps.version_check.outputs.skip_publish != 'true'
         run: npm pack --dry-run
 
       - name: Publish package
+        if: steps.version_check.outputs.skip_publish != 'true'
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Skip publish notice
+        if: steps.version_check.outputs.skip_publish == 'true'
+        run: echo "Skipping publish because this version is already available in npm."
