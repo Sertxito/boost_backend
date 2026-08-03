@@ -67,3 +67,23 @@ Include a short risk assessment:
 - How was behavior validated?
 
 For larger changes, include a rollback note describing how to revert or disable the change safely.
+
+## Main Branch Protection Policy
+
+`main` must be protected in GitHub settings so changes are merged only through approved pull requests.
+
+Recommended repository settings for `main`:
+
+1. Require a pull request before merging.
+1. Require at least 1 approval.
+1. Dismiss stale pull request approvals when new commits are pushed.
+1. Require status checks to pass before merging.
+1. Select required checks:
+   - `CI / validate`
+1. Restrict who can push to matching branches (no direct user pushes).
+1. Do not allow bypassing the above settings.
+
+With these rules enabled:
+
+- Before merge: PR + approval + green checks are required.
+- After merge to `main`: publish workflow runs automatically.
