@@ -2,7 +2,7 @@
 
 Official backend boost for MCPEE.
 
-## What This Package Provides
+## Overview
 
 `mcpee-backend` ships reusable backend reasoning assets for MCPEE, including:
 
