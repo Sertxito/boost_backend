@@ -31,6 +31,16 @@ jobs:
       - name: Validate quality gates
         run: npm run quality
 
+      - name: Validate release secrets
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "$NPM_TOKEN" ]; then
+            echo "NPM_TOKEN is not configured in repository secrets."
+            echo "Create it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
       - name: Run semantic release
         run: npm run release
         env:
