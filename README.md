@@ -19,7 +19,6 @@ Official backend boost for MCPEE.
 
 - Node.js 20 or later
 - npm 10 or later
-- `@mcpee/core` in the target project
 
 ## Quick Start
 
