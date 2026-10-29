@@ -1,3 +1,8 @@
+---
+name: devops-review
+description: 'Assess CI/CD, release governance, rollback readiness, and operational safety for backend delivery.'
+---
+
 # DevOps Review Skill
 
 ## Goal

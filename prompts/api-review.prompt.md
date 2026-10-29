@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for high-signal API design and compatibility assessments.'
+---
+
 # API Review Prompt
 
 ## Purpose

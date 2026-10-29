@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for diagnosability, telemetry coherence, and alert actionability.'
+---
+
 # Observability Review Prompt
 
 ## Purpose

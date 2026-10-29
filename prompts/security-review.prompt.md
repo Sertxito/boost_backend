@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for exploitability-focused backend security assessment.'
+---
+
 # Security Review Prompt
 
 ## Purpose

@@ -1,3 +1,8 @@
+---
+name: testing-review
+description: 'Assess backend test strategy quality and improve confidence, stability, and release safety.'
+---
+
 # Testing Review Skill
 
 ## Goal

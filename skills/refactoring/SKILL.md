@@ -1,3 +1,8 @@
+---
+name: refactoring
+description: 'Plan and execute behavior-safe backend refactors that reduce complexity and improve maintainability.'
+---
+
 # Refactoring Skill
 
 ## Goal

@@ -5,7 +5,7 @@ const requiredFiles = [
   "LICENSE",
   ".github/CODEOWNERS",
   "package.json",
-  "mcpee.json"
+  "boost.json"
 ];
 
 const requiredReadmeSections = ["## Overview", "## Quick Start"];

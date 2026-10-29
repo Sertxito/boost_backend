@@ -1,3 +1,8 @@
+---
+name: data-access-review
+description: 'Detect correctness and performance issues in repositories, queries, transaction scopes, and data contracts.'
+---
+
 # Data Access Review Skill
 
 ## Goal

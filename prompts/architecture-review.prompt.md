@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for boundary integrity, coupling analysis, and migration-safe architecture recommendations.'
+---
+
 # Architecture Review Prompt
 
 ## Purpose

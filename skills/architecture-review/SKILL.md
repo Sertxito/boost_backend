@@ -1,3 +1,8 @@
+---
+name: architecture-review
+description: 'Evaluate backend architecture boundaries, dependency direction, and scalability trade-offs with evidence.'
+---
+
 # Architecture Review Skill
 
 ## Goal

@@ -1,3 +1,8 @@
+---
+name: dependency-analysis
+description: 'Provide an evidence-based dependency analysis workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Dependency Analysis Skill
 
 ## Goal

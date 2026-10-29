@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for CI/CD safety, release governance, and recovery readiness.'
+---
+
 # DevOps Review Prompt
 
 ## Purpose

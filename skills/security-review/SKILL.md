@@ -1,3 +1,8 @@
+---
+name: security-review
+description: 'Surface exploitable backend security weaknesses and prescribe prioritized, evidence-backed remediations.'
+---
+
 # Security Review Skill
 
 ## Goal

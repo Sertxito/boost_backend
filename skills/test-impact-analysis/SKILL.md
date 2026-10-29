@@ -1,3 +1,8 @@
+---
+name: test-impact-analysis
+description: 'Provide an evidence-based test impact analysis workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Test Impact Analysis Skill
 
 ## Goal

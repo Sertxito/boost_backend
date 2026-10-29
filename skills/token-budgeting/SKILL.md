@@ -1,3 +1,8 @@
+---
+name: token-budgeting
+description: 'Provide an evidence-based token budgeting workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Token Budgeting Skill
 
 ## Goal
