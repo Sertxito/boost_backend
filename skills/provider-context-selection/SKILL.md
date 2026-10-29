@@ -1,3 +1,8 @@
+---
+name: provider-context-selection
+description: 'Provide an evidence-based provider context selection workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Provider Context Selection Skill
 
 ## Goal

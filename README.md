@@ -1,10 +1,10 @@
-# mcpee-backend
+# boost-backend
 
-Official backend boost for MCPEE.
+Official backend boost for GitHub Copilot. Standalone: agents, skills, prompts and instructions that Copilot discovers automatically.
 
 ## Overview
 
-`mcpee-backend` ships reusable backend reasoning assets for MCPEE, including:
+`boost-backend` ships reusable backend reasoning assets, including:
 
 - architecture guidance
 - API design patterns
@@ -22,13 +22,27 @@ Official backend boost for MCPEE.
 
 ## Quick Start
 
+This boost is **self-contained**: it does not need any runtime, plugin or MCP server. One command copies its assets to the places where GitHub Copilot / VS Code discover them automatically.
+
 ```bash
-npm install @mcpee/core
-npm install mcpee-backend
-npx mcpee doctor
+# From the root of YOUR project
+npx github:Sertxito/boost_backend
+# or, once published on npm
+npx boost-backend
 ```
 
-MCPEE Core discovers this boost through `mcpee.json`.
+| Asset | Installed into |
+|---|---|
+| Agents | `.github/agents/*.agent.md` |
+| Skills | `.github/skills/<name>/SKILL.md` and `.agents/skills/<name>/SKILL.md` |
+| Prompts | `.github/prompts/*.prompt.md` |
+| Instructions | `.github/instructions/*.instructions.md` |
+| Global instructions | `.github/copilot-instructions.md` (only if the project has none) |
+
+Options: `--target <dir>`, `--force` (overwrite), `--dry-run`, `--no-agents-dir` (skip `.agents/skills`), `--check` (verify install), `--uninstall`.
+Existing files are never overwritten without `--force`, so several boosts can coexist in the same project.
+
+**Verify:** run `npx boost-backend --check`, reload VS Code (`Developer: Reload Window`), then type `@` in Copilot Chat (agents), `/` (prompts) and open the *Configure Tools / Skills* picker.
 
 ## Package Layout
 
@@ -54,18 +68,9 @@ Eval    = how I measure quality
 Example = what good looks like
 ```
 
-## Local Project Customization
+## Local Customization
 
-Do not edit installed content directly under `node_modules/mcpee-backend`.
-
-Use project-local directories instead:
-
-```text
-.mcpee/generated-skills/backend/
-.mcpee/overrides/backend/
-.mcpee/knowledge/
-.mcpee/memory/
-```
+Installed files are plain files in your project (`.github/`). Edit them freely; re-run with `--force` to restore the originals.
 
 ## Quality Checks (Maintainers)
 
@@ -76,3 +81,12 @@ npm run quality
 ```
 
 This runs structure validation, references validation, eval checks, artifact alignment checks, and placeholder checks.
+
+## Naming and collisions
+
+Installed assets are prefixed with `backend-` (e.g. `.github/agents/backend-<name>.agent.md`, `.github/skills/backend-<name>/`) so several boosts can live in the same project, and internal references are rewritten to match.
+
+- Nothing that already exists in the target is overwritten: each ignored file is reported with a `[WARN] ... already existed ... IGNORED` message. Use `--force` to overwrite.
+- An existing `.github/copilot-instructions.md` is kept; the boost's global guidance is installed as `backend-global.instructions.md` instead.
+- Re-running the installer is safe; `--check` and `--uninstall` work from the manifest.
+

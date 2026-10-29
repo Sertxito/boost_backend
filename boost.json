@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.0",
-  "name": "mcpee-backend",
+  "name": "boost-backend",
   "version": "0.1.0",
   "type": "boost",
   "domain": "backend",
-  "description": "Official backend boost for MCPEE: architecture, APIs, refactoring, performance, security, testing, data access and DevOps.",
+  "description": "Official backend boost for GitHub Copilot: architecture, APIs, refactoring, performance, security, testing, data access and DevOps.",
   "capabilities": [
     {
       "id": "backend.architecture.review",

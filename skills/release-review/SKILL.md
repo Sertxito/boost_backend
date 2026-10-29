@@ -1,3 +1,8 @@
+---
+name: release-review
+description: 'Provide an evidence-based release review workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Release Review Skill
 
 ## Goal

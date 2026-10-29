@@ -1,3 +1,8 @@
+---
+name: api-review
+description: 'Audit backend APIs for contract quality, correctness, compatibility, and operational safety before release.'
+---
+
 # API Review Skill
 
 ## Goal

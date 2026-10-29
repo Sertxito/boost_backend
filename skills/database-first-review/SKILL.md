@@ -1,3 +1,8 @@
+---
+name: database-first-review
+description: 'Provide an evidence-based database first review workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Database First Review Skill
 
 ## Goal

@@ -1,15 +1,14 @@
 {
-  "name": "mcpee-backend",
+  "name": "boost-backend",
   "version": "0.1.3",
-  "description": "MCPEE Backend Boost: specs, agents, skills, prompts, and evals for backend reasoning.",
+  "description": "Backend Boost: specs, agents, skills, prompts, and evals for backend reasoning.",
   "type": "module",
-  "main": "index.js",
   "exports": {
-    ".": "./index.js",
-    "./mcpee": "./mcpee.json"
+    "./boost.json": "./boost.json",
+    "./package.json": "./package.json"
   },
   "files": [
-    "mcpee.json",
+    "boost.json",
     "agents",
     "specs",
     "skills",
@@ -19,7 +18,9 @@
     "docs",
     "instructions",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "scripts",
+    ".github/copilot-instructions.md"
   ],
   "scripts": {
     "check:structure": "node scripts/check-structure.js",
@@ -29,10 +30,11 @@
     "check:placeholders": "node scripts/check-placeholders.js",
     "quality": "npm run check:structure && npm run check:refs && npm run check:evals && npm run check:alignment && npm run check:placeholders",
     "release": "semantic-release",
-    "release:dry": "semantic-release --dry-run"
+    "release:dry": "semantic-release --dry-run",
+    "boost:install": "node scripts/install.mjs",
+    "boost:check": "node scripts/install.mjs --check"
   },
   "keywords": [
-    "mcpee",
     "boost",
     "backend",
     "agents",
@@ -40,7 +42,10 @@
     "specs",
     "clean-architecture",
     "ddd",
-    "api-design"
+    "api-design",
+    "copilot",
+    "github-copilot",
+    "agent-skills"
   ],
   "author": "Sergio Hierro Cinos",
   "repository": {
@@ -58,14 +63,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@mcpee/core": "^0.1.0"
-  },
-  "peerDependenciesMeta": {
-    "@mcpee/core": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
@@ -75,5 +72,8 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "semantic-release": "^24.2.7"
+  },
+  "bin": {
+    "boost-backend": "scripts/install.mjs"
   }
 }

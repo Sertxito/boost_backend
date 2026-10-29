@@ -1,3 +1,8 @@
+---
+name: code-review
+description: 'Provide an evidence-based code review workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Code Review Skill
 
 ## Goal

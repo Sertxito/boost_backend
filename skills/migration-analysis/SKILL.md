@@ -1,3 +1,8 @@
+---
+name: migration-analysis
+description: 'Provide an evidence-based migration analysis workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Migration Analysis Skill
 
 ## Goal

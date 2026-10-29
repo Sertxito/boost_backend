@@ -21,7 +21,7 @@ npm run quality
 npm pack --dry-run
 ```
 
-1. Confirm `mcpee.json` capability references are valid.
+1. Confirm `boost.json` capability references are valid.
 1. Confirm no placeholders remain in core assets.
 1. Review changed capabilities and examples for consistency.
 
@@ -60,7 +60,7 @@ This repository includes an automated release workflow:
 
 Configure this repository secret before enabling automated publish:
 
-- `NPM_TOKEN`: npm automation token with publish access to `mcpee-backend`
+- `NPM_TOKEN`: npm automation token with publish access to `boost-backend`
 
 ### Important
 
@@ -70,7 +70,7 @@ Configure this repository secret before enabling automated publish:
 ## Post-Release Validation
 
 - Install package in a clean test workspace.
-- Run core discovery command (`npx mcpee doctor`) in the target environment.
+- Run `npx boost-backend --check` in a clean target project.
 - Spot-check at least one capability from each major domain:
   - API
   - Architecture

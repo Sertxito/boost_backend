@@ -3,13 +3,13 @@ import path from "node:path";
 
 const root = process.cwd();
 const evalDir = path.join(root, "evals");
-const mcpeePath = path.join(root, "mcpee.json");
+const mcpeePath = path.join(root, "boost.json");
 
 const requiredTopLevel = ["schemaVersion", "capability", "description", "qualityDimensions", "cases"];
 const requiredCaseFields = ["id", "title", "input", "expected", "reasoning"];
 
 if (!fs.existsSync(mcpeePath)) {
-  console.error("[ERROR] mcpee.json not found.");
+  console.error("[ERROR] boost.json not found.");
   process.exit(1);
 }
 

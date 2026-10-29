@@ -1,3 +1,8 @@
+---
+name: performance-analysis
+description: 'Identify and prioritize backend bottlenecks affecting latency, throughput, and cost efficiency.'
+---
+
 # Performance Analysis Skill
 
 ## Goal

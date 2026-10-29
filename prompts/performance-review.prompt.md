@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for bottleneck localization and impact-prioritized optimization planning.'
+---
+
 # Performance Review Prompt
 
 ## Purpose

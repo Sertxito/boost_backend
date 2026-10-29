@@ -1,3 +1,8 @@
+---
+name: task-planning
+description: 'Provide an evidence-based task planning workflow that turns repository signals into prioritized, actionable guidance.'
+---
+
 # Task Planning Skill
 
 ## Goal

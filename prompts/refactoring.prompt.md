@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for behavior-safe refactoring plans with clear sequencing.'
+---
+
 # Refactoring Review Prompt
 
 ## Purpose

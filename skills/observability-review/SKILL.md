@@ -1,3 +1,8 @@
+---
+name: observability-review
+description: 'Evaluate whether logs, metrics, and traces are sufficient to detect, diagnose, and resolve backend failures quickly.'
+---
+
 # Observability Review Skill
 
 ## Goal

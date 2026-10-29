@@ -2,10 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const mcpeePath = path.join(root, "mcpee.json");
+const mcpeePath = path.join(root, "boost.json");
 
 if (!fs.existsSync(mcpeePath)) {
-  console.error("[ERROR] mcpee.json not found.");
+  console.error("[ERROR] boost.json not found.");
   process.exit(1);
 }
 
@@ -13,7 +13,7 @@ const mcpee = JSON.parse(fs.readFileSync(mcpeePath, "utf8"));
 const capabilities = Array.isArray(mcpee.capabilities) ? mcpee.capabilities : [];
 
 if (capabilities.length === 0) {
-  console.error("[ERROR] mcpee.json capabilities must be a non-empty array.");
+  console.error("[ERROR] boost.json capabilities must be a non-empty array.");
   process.exit(1);
 }
 

@@ -1,3 +1,7 @@
+---
+description: 'Guide runtime composition for data correctness, query efficiency, and transaction safety reviews.'
+---
+
 # Data Access Review Prompt
 
 ## Purpose

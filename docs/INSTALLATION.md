@@ -3,33 +3,24 @@
 ## Prerequisites
 
 - Node.js 20 or later
-- npm 10 or later
-- `@mcpee/core` installed in the target project
+- A project with GitHub Copilot in VS Code (no other runtime required)
 
 ## Install
 
 ```bash
-npm install @mcpee/core
-npm install mcpee-backend
+npx github:Sertxito/boost_backend   # or: npx boost-backend
 ```
+
+Copies agents, skills, prompts and instructions into `.github/` (and skills also into `.agents/skills/`). Options: `--target`, `--force`, `--dry-run`, `--no-agents-dir`, `--check`, `--uninstall`.
 
 ## Verify
 
 ```bash
-npx mcpee doctor
+npx boost-backend --check
 ```
 
-The backend boost is discovered through `mcpee.json`.
+Then reload VS Code and type `@` in Copilot Chat to see the agents.
 
 ## Local Customization
 
-Avoid direct edits in `node_modules/mcpee-backend`.
-
-Use project-local directories:
-
-```text
-.mcpee/generated-skills/backend/
-.mcpee/overrides/backend/
-.mcpee/knowledge/
-.mcpee/memory/
-```
+Installed files are plain files in your project; edit them freely. Re-run with `--force` to restore the originals.

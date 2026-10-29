@@ -1,8 +1,8 @@
-# Contributing to mcpee-backend
+# Contributing to boost-backend
 
 ## Scope
 
-This repository provides backend-oriented MCPEE boost artifacts:
+This repository provides backend-oriented boost artifacts for GitHub Copilot:
 
 - Agents
 - Specs
@@ -23,7 +23,7 @@ Contributions must preserve internal alignment across these artifact families.
 npm run quality
 ```
 
-1. If adding or changing capabilities, verify `mcpee.json` references remain valid.
+1. If adding or changing capabilities, verify `boost.json` references remain valid.
 1. Submit a PR with:
 - change summary,
 - impacted capabilities,
@@ -45,7 +45,7 @@ When changing a capability domain, keep these assets aligned:
 - `prompts/<domain>.prompt.md`
 - `evals/<domain>.cases.json`
 - `examples/good-<domain>.md`
-- `mcpee.json` capability mapping
+- `boost.json` capability mapping
 
 ## Validation Gates
 

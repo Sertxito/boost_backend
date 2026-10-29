@@ -2,10 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const mcpeePath = path.join(root, "mcpee.json");
+const mcpeePath = path.join(root, "boost.json");
 
 if (!fs.existsSync(mcpeePath)) {
-  console.error("[ERROR] mcpee.json not found.");
+  console.error("[ERROR] boost.json not found.");
   process.exit(1);
 }
 
@@ -15,7 +15,7 @@ let mcpee;
 try {
   mcpee = JSON.parse(content);
 } catch (error) {
-  console.error("[ERROR] mcpee.json is not valid JSON.");
+  console.error("[ERROR] boost.json is not valid JSON.");
   console.error(String(error));
   process.exit(1);
 }
@@ -23,12 +23,12 @@ try {
 const requiredTopLevel = ["schemaVersion", "name", "version", "type", "domain", "capabilities"];
 const missingTopLevel = requiredTopLevel.filter((key) => !(key in mcpee));
 if (missingTopLevel.length > 0) {
-  console.error(`[ERROR] mcpee.json is missing top-level keys: ${missingTopLevel.join(", ")}`);
+  console.error(`[ERROR] boost.json is missing top-level keys: ${missingTopLevel.join(", ")}`);
   process.exit(1);
 }
 
 if (!Array.isArray(mcpee.capabilities) || mcpee.capabilities.length === 0) {
-  console.error("[ERROR] mcpee.json must include a non-empty capabilities array.");
+  console.error("[ERROR] boost.json must include a non-empty capabilities array.");
   process.exit(1);
 }
 
